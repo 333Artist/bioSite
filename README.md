@@ -5,6 +5,6 @@ A student developer biography website.
 
 <h2>Contributers</h2>
 <ul>
-<li>Maddison Montijo</li>>
+<li>Maddison Montijo</li>
 <li>Sampson Sue<li>
-<ul>
+</ul>

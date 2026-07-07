@@ -3,23 +3,70 @@
 :root {
     --Primary-color: #182232;
     --Secondary-color: #D837BE;
-    --Info--color: #2F80ED;
+    --Info-color: #2F80ED; 
     --Success-color: #27AE60;
     --Warning-color: #E2B93B;
-    --Error-color:#EB5757;
-    --Black1-color:#000000;
-    --Black2-color:#1D1D1D;
-    --Black3-color:#282828;
-    --Grey1-color:#3D557D;
-    --Grey2-color:#647797;
-    --Grey3-color:#8797B1;
-    --Grey4-color:#9EAABE;
-    --Grey5-color:#ECEEF2;
-    --White-color:#FFFFFF;
+    --Error-color: #EB5757;
+    --Black1-color: #000000;
+    --Black2-color: #1D1D1D;
+    --Black3-color: #282828;
+    --Grey1-color: #3D557D;
+    --Grey2-color: #647797;
+    --Grey3-color: #8797B1;
+    --Grey4-color: #9EAABE;
+    --Grey5-color: #ECEEF2;
+    --White-color: #FFFFFF;
+
+    
+    /*I might change alternative text from system-ui to regular*/
+    --Heading-H1-font: "Nabla", system-ui;
+    --Heading-H2-font: "Nabla", system-ui;
+    --Heading-H3-font: "Bayon", sans-serif;
+    --Heading-H4-font: "Bayon", sans-serif;
+    --Heading-H5-font: "Bayon", sans-serif;
+    --Heading-H6-font: "Bayon", sans-serif;
+    --Small-text-font: "Pixelify Sans", sans-serif;
+    --Small-text-bold-font: "Pixelify Sans", sans-serif; 
+    --Normal-text-font: "Pixelify Sans", sans-serif;
+    --Normal-text-bold-font: "Bitcount Prop Single", system-ui; 
+    --Medium-text-font: "Bitcount Prop Single", system-ui;
+    --Medium-text-bold-font: "Bitcount Prop Single", system-ui;
+    --Large-text-font: "Bitcount Prop Single", system-ui;
+    --Large-text-bold-font: "Bitcount Prop Single", system-ui;
 
 
-     --Heading-H1:  "Nabla", system-ui;
-     --Heading-H3: "Bayon", sans-serif;
+    --Heading-H1-size: 56px;
+    /* 56/61.6 means 1.1 */
+    --Heading-H1-line-height: calc(56/61.6);
+
+    --Heading-H2-size: 40px;
+    --Heading-H1-line-height: 1.1;
+
+
+    --Heading-H3-size: 32px;
+    --Heading-H4-size: 24px;
+    --Heading-H5-size: 20px;
+    --Heading-H6-size: 16px;
+    
+    --Small-text-size: 12px;
+    --Small-text-weight: 400;
+    --Small-text-bold-weight: 700;
+
+
+    --Normal-text-size: 16px;
+    --Normal-text-weight: 400;
+    --Normal-text-bold-weight: 700;
+    --Normal-text-line-height: ;
+
+    --Medium-text-size: 20px;
+    --Medium-text-weight: 400;
+    --Medium-text-bold-weight: 700;
+
+    --Large-text-size: 28px;
+    --Large-text-weight: 400;
+    --Large-text-bold-weight: 700;
+
+
 
 
 

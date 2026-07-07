@@ -1,0 +1,310 @@
+
+
+:root {
+    --Primary-color: #182232;
+    --Secondary-color: #D837BE;
+    --Info--color: #2F80ED;
+    --Success-color: #27AE60;
+    --Warning-color: #E2B93B;
+    --Error-color:#EB5757;
+    --Black1-color:#000000;
+    --Black2-color:#1D1D1D;
+    --Black3-color:#282828;
+    --Grey1-color:#3D557D;
+    --Grey2-color:#647797;
+    --Grey3-color:#8797B1;
+    --Grey4-color:#9EAABE;
+    --Grey5-color:#ECEEF2;
+    --White-color:#FFFFFF;
+
+
+     --Heading-H1:  "Nabla", system-ui;
+     --Heading-H3: "Bayon", sans-serif;
+
+
+
+}
+
+
+
+html {
+    background-color: gray;
+}
+
+header {
+    background-color: grey;
+    grid-area: header;
+
+}
+
+footer {
+
+    grid-area: footer;
+
+    color: white;
+    text-align: right;
+
+}
+
+.main-content {
+    grid-area: main;
+    background-color: grey;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px 0;
+}
+
+.nav-list {
+
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+
+}
+
+li {
+
+    list-style-type: none;
+
+}
+
+li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+
+
+
+}
+
+/*☐ Need to make seperate card for just image!*/ 
+
+.card {
+    border-radius: 8px;
+    background-color: white;
+    filter: drop-shadow(6px 16px 5px rgba(0, 0, 0, 0.2));
+    overflow: hidden;
+
+    /* Figma's desktop resolution was way more square than I thought it'd be ☑︎ */ 
+    /* Let grid dictate placement, but keep fixed limits if desired */
+    width: 100%;
+    max-width: 1245px;
+    min-width: 1000px;
+    height: 550px;
+    margin: 0 auto;
+    /* Centers the card horizontally inside its grid cell */
+}
+
+.card h1 {
+    font-family: var(--Heading-H1);
+   
+}
+
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit:fill;
+    border-radius: 8px;  
+
+}
+
+.card-box {
+    display: flex;
+    /* Forces children (img and content) side-by-side */
+    flex-direction: row;
+    /* Aligns them horizontally */
+    height: 100%;
+    /* Fills the card height */
+    width: 100%;
+    /* Fills the card width */
+}
+
+.card-img {
+    background-color: rgb(70, 69, 69);
+    flex: 1;
+    /* Takes up exactly half (50%) of the container space */
+    height: 100%;
+    /* Stretches to the full height of the card */
+}
+
+.card-content {
+    flex: 1;
+    /* Takes up the other exact half (50%) of the container space */
+    padding: 20px;
+    /* Gives text breathing room away from the edges */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Vertically centers text next to the image */
+}
+
+.gallery {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*Centers boxes*/
+    gap: 10px;
+
+    
+
+
+}
+
+.gallery-box {
+    border-radius: 8px;
+    background-color: black;
+    filter: drop-shadow(6px 16px 5px rgba(0, 0, 0, 0.2));
+
+    width: 300px;
+    height: 300px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.gallery-box img {
+    width: 100%;
+    height: 100%;
+    object-fit:contain;
+    border-radius: 8px;  
+}
+
+.text-card {
+    border-radius: 8px;
+    background-color: white;
+    filter: drop-shadow(6px 16px 5px rgba(0, 0, 0, 0.2));
+
+  
+    width: 990px;
+    height: 350px;
+
+    margin: 20px;
+
+    
+}
+
+.text-card h1 {
+    margin: 20px;
+}
+
+.text-card p {
+    margin: 20px
+    
+}
+
+/*Full Body Image Card*/
+.fbic {
+
+    border-radius: 8px;
+    background-color: white;
+    filter: drop-shadow(6px 16px 5px rgba(0, 0, 0, 0.2));
+
+
+    height: 350px;
+    width: 200px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+.overlay {
+  background: linear-gradient(to top, black, transparent) no-repeat center center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.fbic img {
+    background-image:  linear-gradient(rgba(0, 0, 0, 0.5));
+    background-size: cover;
+    background-position: center;
+
+    width: 100%;
+    height: 100%;
+    object-fit:fill;
+    border-radius: 8px;  
+
+
+}
+
+
+.html-text-box {
+
+    width: 1200px;;;
+
+   
+   
+}
+
+
+.bottom-cards-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+
+
+
+
+
+/* Update the original container to use the body wrapper approach */
+.container {
+    display: grid;
+    /* 80px header, the middle content takes all remaining space (1fr), 50px footer */
+    grid-template-rows: 80px 1fr 50px;
+    grid-template-columns: 1fr 4fr 1fr;
+    height: 100vh;
+    grid-template-areas:
+        "header header header"
+        "left   main   right"
+        "footer footer footer";
+    grid-gap: 10px;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.main-card-content {
+    grid-area: main;
+    background-color: grey;
+
+    /* This centers the card perfectly horizontally and vertically in the main grid area */
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.container-2 {
+
+    display: grid;
+    grid-template-rows: 80px auto 1fr auto 50px;
+    grid-template-columns: 1fr 4fr 1fr;
+    height: 100vh;
+    grid-template-areas:
+        "header         header      header"
+        "left-side      main        right-side"
+        "footer         footer      footer";
+
+    grid-gap: 20px;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+
+}

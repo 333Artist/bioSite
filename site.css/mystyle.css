@@ -75,11 +75,19 @@
 
 
 html {
-    background-color: gray;
+    min-height: 100vh;
+    background-color: var(--Primary-color);
+    background-image: linear-gradient(rgba(55, 47, 162, 0.5), rgba(31, 26, 76, 0.5)), url(assets/1243346.png);
+    background-attachment: fixed;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    
 }
 
 header {
-    background-color: grey;
+    
     grid-area: header;
 
 }
@@ -87,15 +95,16 @@ header {
 footer {
 
     grid-area: footer;
+    
 
-    color: white;
+    
     text-align: right;
 
 }
 
 .main-content {
     grid-area: main;
-    background-color: grey;
+    
 
     display: flex;
     flex-direction: column;
@@ -106,25 +115,39 @@ footer {
 }
 
 .nav-list {
-
+    
+    
     padding: 10px;
     display: flex;
     justify-content: center;
 
 }
 
+.nav-list a {
+     font-family: var(--Normal-text-font);
+     
+}
+
 li {
+
 
     list-style-type: none;
 
 }
 
 li a {
-    color: white;
+
+
+    color: var(--White-color);
     text-decoration: none;
     padding: 10px;
 
 
+
+}
+
+li :hover {
+     color: var(--Secondary-color);
 
 }
 
@@ -139,16 +162,28 @@ li a {
     /* Figma's desktop resolution was way more square than I thought it'd be ☑︎ */ 
     /* Let grid dictate placement, but keep fixed limits if desired */
     width: 100%;
-    max-width: 1245px;
-    min-width: 1000px;
-    height: 550px;
+    max-width: 950px;
+    
+    height: 500px;
     margin: 0 auto;
     /* Centers the card horizontally inside its grid cell */
 }
 
 .card h1 {
-    font-family: var(--Heading-H1);
+    font-family: var(--Heading-H1-font);
+    color: var(--Primary-color);
+    font-size: var(--Heading-H1-size);
    
+}
+
+.card h2 {
+    font-family: var(--Normal-text-font);
+    color: var(--Grey4-color);
+}
+
+.card p {
+    font-family:var(--Normal-text-font);
+    color: var(--Grey1-color);
 }
 
 
@@ -156,7 +191,7 @@ li a {
     width: 100%;
     height: 100%;
     object-fit:fill;
-    border-radius: 8px;  
+   
 
 }
 
@@ -172,7 +207,7 @@ li a {
 }
 
 .card-img {
-    background-color: rgb(70, 69, 69);
+    background-color: var(--Primary-color);
     flex: 1;
     /* Takes up exactly half (50%) of the container space */
     height: 100%;
@@ -182,13 +217,73 @@ li a {
 .card-content {
     flex: 1;
     /* Takes up the other exact half (50%) of the container space */
-    padding: 20px;
+    padding: 40px;
     /* Gives text breathing room away from the edges */
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: top;
     /* Vertically centers text next to the image */
 }
+
+
+.hobbies-img-card {
+    border-radius: 8px;
+    background-color: white;
+    filter: drop-shadow(6px 16px 5px rgba(0, 0, 0, 0.2));
+    overflow: hidden;
+
+    /* Figma's desktop resolution was way more square than I thought it'd be ☑︎ */ 
+    /* Let grid dictate placement, but keep fixed limits if desired */
+    width: 100%;
+    max-width: 1245px;
+    min-width: 1000px;
+    height: 550px;
+    margin: 0 auto;
+    /* Centers the card horizontally inside its grid cell */
+}
+
+
+
+.hobbies-img-card img {
+    width: 100%;
+    height: 100%;
+    object-fit:fill;
+   
+
+}
+
+.card-box {
+    display: flex;
+    /* Forces children (img and content) side-by-side */
+    flex-direction: row;
+    /* Aligns them horizontally */
+    height: 100%;
+    /* Fills the card height */
+    width: 100%;
+    /* Fills the card width */
+}
+
+.card-img {
+    background-color: var(--Primary-color);
+    flex: 1;
+    /* Takes up exactly half (50%) of the container space */
+    height: 100%;
+    /* Stretches to the full height of the card */
+}
+
+.card-content {
+    flex: 1;
+    /* Takes up the other exact half (50%) of the container space */
+    padding: 40px;
+    /* Gives text breathing room away from the edges */
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    /* Vertically centers text next to the image */
+}
+
+
+
 
 .gallery {
 
@@ -217,6 +312,7 @@ li a {
 
 }
 
+
 .gallery-box img {
     width: 100%;
     height: 100%;
@@ -240,12 +336,23 @@ li a {
 
 .text-card h1 {
     margin: 20px;
+
+     font-family: var(--Heading-H1-font);
+    color: var(--Primary-color);
+    font-size: var(--Heading-H1-size);
 }
 
 .text-card p {
-    margin: 20px
+    margin: 20px;
+     font-family:var(--Normal-text-font);
+    color: var(--Grey1-color);
     
 }
+
+
+
+
+
 
 /*Full Body Image Card*/
 .fbic {
@@ -288,12 +395,22 @@ li a {
 
 
 .html-text-box {
+    
+    color:var(  --Secondary-color);
+    font-family: var(--Heading-H1-font);
 
-    width: 1200px;;;
+    width: 1200px;
 
    
    
 }
+
+.html-text-box p {
+
+color:var(--White-color);
+font-family: var(--Normal-text-font);
+}
+
 
 
 .bottom-cards-row {
@@ -329,7 +446,7 @@ li a {
 
 .main-card-content {
     grid-area: main;
-    background-color: grey;
+    
 
     /* This centers the card perfectly horizontally and vertically in the main grid area */
     display: grid;
